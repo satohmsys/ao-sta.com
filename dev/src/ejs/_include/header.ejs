@@ -1,20 +1,18 @@
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.1&appId=430549517149025&autoLogAppEvents=1';
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 <header class="siteHeader">
 	<div class="wrap">
-		<h1 class="siteHeader__logo">
-			
-		</h1>
+		<<% if( $active!='top'){ %>h1<% }else{ %>div<%}%> class="siteHeader__logo">
+			<img src="<%- $path %>/../img/common-logo.svg" width="200" alt="青森商工議会 青森スタートアップセンター">
+		</<% if( $active!='top'){ %>h1<% }else{ %>div<%}%>>
 		<nav class="siteHeader__nav">
-			<ul>
-				<li>
-					<a href="">
-				
-					</a>
-				</li>
-				<li>
-					<a href="">
-					</a>
-				</li>						
-			</ul>
+			<%- include( 'nav.ejs' ); %>
 		</nav>
 	</div>
 </header>

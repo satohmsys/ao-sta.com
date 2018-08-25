@@ -22,7 +22,9 @@ body{
 /////// ヘッダー ラッパー
 .siteHeader
 {
-
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: #ffffff;
 
 	@include mq( tab ){
 
@@ -30,6 +32,12 @@ body{
 	
 	
 	 > .wrap{
+		 max-width: percentage( 1230 / 1366 );
+		 display: flex;
+		 flex-direction: row;
+		 justify-content: space-between;
+		 align-items: center;
+		 
 		 @include mq( pc ){
 			 max-width: $outerWidth;
 		} 			 
@@ -64,6 +72,11 @@ body{
 		}	
 				
 		li{
+			list-style: none;
+
+			&:not( :last-child ){
+				margin-right: 40px;
+			}
 		}
 
 		a.active{
@@ -104,6 +117,125 @@ body{
 ////////////////////
 
 .siteFooter{
+	text-align: center;
+	background-color: #ffffff;
+
+	a{
+		color: inherit;
+	}
+
+	&__copy{
+		;height: 1px;
+		margin-right: auto;
+		margin-bottom: 60px;
+		margin-left: auto;
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		letter-spacing: 0.3em;
+
+		&.js-effect{
+			span{
+				display: inline-block;
+				opacity: 0;
+				transform: translateY( 10px );
+				transition: transition();
+			}
+			@for $i from 0 through 20 {
+				span:nth-of-type( #{$i} ){
+					transition-delay: #{0.05*$i}s;
+				}
+			}
+		}
+		&.-on{
+			span{
+				opacity: 1;
+				transform: translateY( 00px );
+			}	
+		
+			.siteFooter__copy__line:after{
+				width: 100%;
+			}								
+		}
+	
+		&__en{
+			font-family: $fontFamily_en;
+			font-weight: 900;
+			color: $color_text_index;
+		}
+
+		&__ja{
+			font-weight: bold;
+		}
+
+		&__line{
+			width: 100px;
+			height: 1px;
+			margin-left: $space_s;
+			margin-right: $space_s;
+			display: inline-block;
+			position: relative;
+
+			&:after{
+				content: " ";
+				width: 0%;
+				margin: auto;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				transition: transition();
+				transition-delay: 1.25s;
+				height: 1px;
+				background-color: $basefontColor;
+			}
+		}
+
+	}
+	
+	&__main{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		border-top: 1px solid $border;
+	}
+
+
+	&__logo{
+		margin-bottom: $space_m;
+	}
+
+	
+	&__address{
+		margin-bottom: $space_m;		
+		line-height: 2;
+		font-size: $fontsize_s;
+	}
+
+
+	&__nav{
+		ul{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+		}
+
+		li{
+			list-style: none;
+
+			&:not( :last-child ){
+				margin-right: $space_s;
+			}
+		}
+	}
+
 	@include mq( tab ){
 	}	
+
+
+	&__copyright{
+		font-size: $fontsize_s;
+	}
 }

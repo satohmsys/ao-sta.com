@@ -17,8 +17,6 @@
 
 ::selection{background-color: rgba(saturate($blue , 13) , 0.3);}
 html{
-	padding-top: 200px;
-	
 	font-size: 10px;
 	// font-size: $basefontSize;
 	font-weight: 300;
@@ -41,7 +39,8 @@ body{
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;
-	font-size: 1.5em;
+	font-size: 1.6em;
+	letter-spacing: 0.15em;
 }
 
 h1 , h2 , h3 , h4 , h5 , h6{
