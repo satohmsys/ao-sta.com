@@ -1,0 +1,62 @@
+//////////////////////////////////////////
+
+//font setting
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+
+// @font-face {
+//   font-family: ' ';
+//   src: url('../fonts/ .woff') format('woff'),
+//      url('../fonts/ .ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('../fonts/Heebo-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Heebo';
+  src: url('../fonts/Heebo-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+@font-face {
+   font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/NotoSansCJKjp-Regular.woff2') format('woff2'),
+         url('../fonts/NotoSansCJKjp-Regular.woff') format('woff'),
+         url('../fonts/NotoSansCJKjp-Regular.ttf')  format('truetype'),
+         url('../fonts/NotoSansCJKjp-Regular.eot') format('embedded-opentype');
+}
+@font-face {
+   font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/NotoSansCJKjp-Bold.woff2') format('woff2'),
+         url('../fonts/NotoSansCJKjp-Bold.woff') format('woff'),
+         url('../fonts/NotoSansCJKjp-Bold.ttf')  format('truetype'),
+         url('../fonts/NotoSansCJKjp-Bold.eot') format('embedded-opentype');
+}
+@font-face {
+   font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/NotoSansCJKjp-Black.woff2') format('woff2'),
+         url('../fonts/NotoSansCJKjp-Black.woff') format('woff'),
+         url('../fonts/NotoSansCJKjp-Black.ttf')  format('truetype'),
+         url('../fonts/NotoSansCJKjp-Black.eot') format('embedded-opentype');
+}
+
+
+// 【明朝】　font-family:Times New Roman , "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", Hiragino Mincho ProN , "MSP明朝","MS PMincho","MS 明朝",serif;
+// 【ゴシック】　font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;

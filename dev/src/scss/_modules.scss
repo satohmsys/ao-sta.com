@@ -1,0 +1,109 @@
+//////////////////////////////////////////
+
+//module
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+
+body{
+	position: relative;
+}
+
+
+
+////////////////////
+
+// header
+
+////////////////////
+
+/////// ヘッダー ラッパー
+.siteHeader
+{
+
+
+	@include mq( tab ){
+
+	}		
+	
+	
+	 > .wrap{
+		 @include mq( pc ){
+			 max-width: $outerWidth;
+		} 			 
+		
+		@include mq( tab ){
+			flex-direction: column;
+		} 	
+	 }
+
+	&__logo{
+
+		a{
+			color: #2a2a2a;				
+		}
+		
+		a.active{
+			&:hover{
+				color: #2a2a2a;				
+			}
+		}		
+	}
+
+	&__nav{
+
+		line-height: 1;
+		ul{
+			display: flex;
+			flex-direction: row;
+
+			@include mq( tab ){
+			}
+		}	
+				
+		li{
+		}
+
+		a.active{
+			font-weight: bold;	
+					
+			&:before{
+				width: 99%;
+				left: -1px;
+			}					
+		}
+		a,
+		span{
+			color: inherit;		
+			position: relative;
+			cursor: pointer;
+			
+			&:before{
+			}	
+
+			@include mq( tab ){
+			}
+			@include mq( tab, min ){
+				@include mouseOver(){
+					opacity: 0.75;
+				}				
+			}
+		}		
+			
+	}
+}
+
+
+
+////////////////////
+
+// footer
+
+////////////////////
+
+.siteFooter{
+	@include mq( tab ){
+	}	
+}
