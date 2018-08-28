@@ -63,26 +63,26 @@
 
 ////////スマホで非表示
 
-.spShow{
+.-only-sp{
 	display: none;
 }
 @include mq( sp ){
-	.spHide{
+	.-no-sp{
 		display: none;	
 	}
-	.spShow{
+	.-only-sp{
 		display: inherit;
 	}
 } //max 580
 
-.tabShow{
+.-only-tab{
 	display: none;
 }
 @include mq( tab ){
-	.tabHide{
+	.-no-tab{
 		display: none;	
 	}
-	.tabShow{
+	.-only-tab{
 		display: inherit;
 	}
 } //max 780
