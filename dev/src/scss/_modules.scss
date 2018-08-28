@@ -24,8 +24,20 @@ body{
 {
 	padding-top: 70px;
 	padding-bottom: 70px;
-	background-color: #ffffff;
-
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	right: 0;
+	left: 0;
+	transition: transition();
+	
+	
+	@at-root .-isScrolled .siteHeader{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-color: #ffffff;
+	}
+	
 	@include mq( tab ){
 
 	}		
@@ -198,7 +210,7 @@ body{
 	&__main{
 		padding-top: 60px;
 		padding-bottom: 60px;
-		border-top: 1px solid $border;
+		border-top: 1px solid $color_border;
 	}
 
 
