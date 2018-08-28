@@ -5,3 +5,14 @@
 //include by style.scss
 
 //////////////////////////////////////////
+
+@keyframes mvZoom{
+    0%{
+        transform-origin: center center;
+        transform: scale( 1 ) translateX( 0 );
+    }
+    100%{
+        transform-origin: center center;
+        transform: scale( 1.035 ) translateX( -1.25vw );
+    }
+}

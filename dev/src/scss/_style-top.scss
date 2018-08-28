@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "fonts.scss";
 @import "mixins.scss";
+@import "./../../node_modules/slick-carousel/slick/slick";
 ////////////////////////////////////////
 
 
@@ -39,6 +40,65 @@
 }
 
 
+    ////////mv
+    .mv{
+        .slick-slide{
+
+            .mv__img{
+                width: 100%;
+                position: relative;
+                height: 0;
+                overflow: hidden;
+                padding-top: percentage( 592 / 1366 );
+
+                &:before{
+                    content: " ";
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    display: block;
+                    mix-blend-mode: hue;
+                    transition: transition();
+                    transition-delay: 0.7s;
+                    background-color: $orange;
+                }
+    
+            }
+
+            img{
+                width: calc( 100% + 10px );
+                height: auto;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                will-change: filter, transform;
+                filter: blur( 5px );
+                transition: transition();
+                transition-delay: 0.35s;                
+            }
+        }
+        .slick-current{
+
+            .mv__img{
+                &:before{
+                    width: 0;
+                }
+            }
+            img{
+                width: 100%;
+                filter: blur(0);
+                animation: mvZoom 10s linear 0s 1 normal;
+            }
+        }
+    }
 
 
 
@@ -66,6 +126,10 @@
                 height: 1em;
                 line-height: 1;
                 overflow: hidden;
+                border-bottom: 1px solid ;
+                box-sizing: border-box;
+                transition: trasnsition();
+
 
                 &:not( :last-child ){
                     margin-bottom: $space_s;
@@ -102,9 +166,10 @@
             line-height: 1;
             margin-bottom: -0.5em;
             letter-spacing: 0.3em;
-            font-weight: 900;
-            font-size: $fontsize_xl;
             position: relative;
+            font-weight: 900;
+            white-space: nowrap;
+            font-size: $fontsize_xl;
 
             &:before{
                 content: " ";
@@ -118,26 +183,14 @@
                 transition: transition();
                 transition-delay: 1.05s;
             }
-
-            // span{
-            //     width: 1.3em;
-            //     opacity: 0;
-            //     display: inline-block;
-            //     vertical-align: bottom;
-            //     transform: translateY( 20px );
-            //     transition: transition(); 
-
-            //     @for $i from 0 through 20 {
-            //         &:nth-child( #{$i} ){
-            //             transition-delay: #{0.08*$i + 0.6}s;
-            //         }
-            //     }            
-            // }
         }
     }
 
     .section--copy{
         &.-on .copy{
+            div{
+                border-width: 0;
+            }
             div span{
                transform: translateY(0);
            }
@@ -174,10 +227,12 @@
 
     //////// concept
     .section--concept{
+        position: relative;
 
         .wrap{
             position: relative;
         }
+
 
         .section{
             &__index{
@@ -187,6 +242,32 @@
                 right: 0;
             }
         }
+         &.js-effect .section__index div {            
+            overflow: hidden;
+            border-left: 1px solid;
+            transition: transition();
+            box-sizing: border-box;
+
+            span{
+                transform: translateX( -100% );
+                transition: transition();
+                display: inline-block;
+            }
+            @for $i from 0 through 4 {
+                &:nth-child( #{$i} ) span{
+                    transition-delay: #{0.08*$i}s;
+                }
+            }            
+        }
+
+        &.js-effect.-on .section__index div {
+            border-width: 0;
+            span{
+                transform: translateY( 0 );                    
+            }
+        }       
+
+
 
         .conceptParagraph{
             max-width: 860px;            
@@ -194,6 +275,40 @@
 
             &:not( :last-child ){
                 margin-bottom: $space_m;
+            }
+        }
+
+
+        &__a{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            mix-blend-mode: overlay;
+            // fill: #f6ece6;
+
+            svg{
+                fill: none;
+                transform: translate3d(0,0,0);
+
+            }
+
+        
+            path{
+                stroke: #999;
+                stroke-dasharray: #{1783 };
+                stroke-dashoffset: -#{1783 };
+                transition: all 3s linear 0s;
+                 transition: stroke-dasharray 1s linear 0s,
+                        stroke-dashoffset 1s linear 0s, 
+                        fill 0.5s linear 3s;
+            }
+
+            .-on{
+                fill: #f6ece6;
+                // stroke-dasharray: #{0};
+                // stroke-dashoffset: -#{0};
             }
         }
 
@@ -227,7 +342,7 @@
             }
 
             img{
-                border: 1px solid $border;
+                border: 1px solid $color_border;
                 line-height: 0;
             }
 

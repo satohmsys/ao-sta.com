@@ -72,13 +72,8 @@ var commonScrollToggle = () => {
 }
 
 var headExpand = () => {
-	let $mvHeight = $('.mainvisual').height();
 	let f = ($scrollVal) => {
-		$mvHeight * 2 < $scrollVal ? $body.addClass('-isScrolledMore') : $body.removeClass('-isScrolledMore')
-		350 < $scrollVal ? $body.addClass('-isScrolled') : $body.removeClass('-isScrolled')
-		// if(350 < $scrollVal) $('.siteHeader').css({
-
-		// })
+		500 < $scrollVal ? $body.addClass('-isScrolled') : $body.removeClass('-isScrolled')
 	}
 
 	getScrollVal(f);
