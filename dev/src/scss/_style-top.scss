@@ -18,6 +18,18 @@
 
 ////////////////////////////////////////
 
+%line{
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+        transition: transition();     
+        transition-delay: 0.5s;           
+    background-color: $basefontColor;    
+}
+
 .section{
     margin-bottom: $space_l;
 
@@ -29,6 +41,35 @@
         font-weight: 900;
     }
 
+    &__index.js-effect{
+         > span, span{
+             display: inline-block;
+             transition: transition();
+         }
+        >span{
+            position: relative;
+            overflow: hidden;
+
+            &:after{
+                width: 100%;
+                height: 1px;
+                @extend %line;
+            }
+        }
+        >span >span{
+            transform: translateY( 1.25em );
+        }
+    }
+
+    &__index.js-effect.-on{
+        >span:after{
+            width: 0;
+        }
+        >span >span{
+            transform: translateY( 0em );
+        }
+    }    
+
     &__index__description{
         line-height: 1;
         margin-top: $space_s;
@@ -39,6 +80,12 @@
     }
 }
 
+
+///////////////////////////////////////
+
+// style
+
+////////////////////////////////////////
 
     ////////mv
     .mv{
@@ -66,8 +113,7 @@
                     transition: transition();
                     transition-delay: 0.7s;
                     background-color: $orange;
-                }
-    
+                }    
             }
 
             img{
@@ -86,7 +132,6 @@
             }
         }
         .slick-current{
-
             .mv__img{
                 &:before{
                     width: 0;
@@ -126,9 +171,14 @@
                 height: 1em;
                 line-height: 1;
                 overflow: hidden;
-                border-bottom: 1px solid ;
-                box-sizing: border-box;
-                transition: trasnsition();
+                position: relative;
+
+                &:after{
+                    width: 100%;
+                    height: 1px;
+                      @extend %line;
+
+                }
 
 
                 &:not( :last-child ){
@@ -149,7 +199,7 @@
             //     }
             // }
 
-
+            //line
             &:after{
                 content: " ";
                 width: 0%;
@@ -188,11 +238,12 @@
 
     .section--copy{
         &.-on .copy{
-            div{
-                border-width: 0;
-            }
             div span{
                transform: translateY(0);
+           }
+
+           &__en div:after{
+                width: 0;
            }
 
            &__en:after{
@@ -216,6 +267,8 @@
 
     //////// intro
     .section--intro{
+        position: relative;
+        z-index: 1;
 
         &__copy{
             margin-bottom: $space_s;
@@ -244,10 +297,14 @@
         }
          &.js-effect .section__index div {            
             overflow: hidden;
-            border-left: 1px solid;
-            transition: transition();
-            box-sizing: border-box;
+            position: relative;
 
+            &:after{
+                width: 1px;
+                height: 100%;
+                @extend %line;
+            }                
+            
             span{
                 transform: translateX( -100% );
                 transition: transition();
@@ -261,7 +318,9 @@
         }
 
         &.js-effect.-on .section__index div {
-            border-width: 0;
+            &:after{
+                height: 0;
+            }
             span{
                 transform: translateY( 0 );                    
             }
@@ -300,8 +359,8 @@
                 stroke-dasharray: #{1783 };
                 stroke-dashoffset: -#{1783 };
                 transition: all 3s linear 0s;
-                 transition: stroke-dasharray 1s linear 0s,
-                        stroke-dashoffset 1s linear 0s, 
+                 transition: stroke-dasharray 1s linear 1s,
+                        stroke-dashoffset 1s linear 1s, 
                         fill 0.5s linear 3s;
             }
 

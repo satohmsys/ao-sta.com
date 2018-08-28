@@ -43,7 +43,7 @@ import 'slick-carousel';
 			}
 
 			$a.css( {
-				'transform': 'translateY(' + $scrollVal / -11 + 'px' + ')'
+				'transform': 'translateY(' + $scrollVal / -6 + 'px' + ')'
 			})
 			
 		};
