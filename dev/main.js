@@ -4,6 +4,7 @@ scripts
 
 *************************/
 
+
 /**
 * html監視設定
 */
@@ -14,9 +15,9 @@ import './src/ejs/index.ejs';
 import './src/scss/style.scss';
 
 import common from './src/js/common.js';
-// import top from './js/top.js';
+import top from './src/js/top.js';
 
 
 common();
-// top();
+top();
 	
