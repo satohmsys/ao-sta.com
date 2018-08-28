@@ -112,7 +112,7 @@
                 padding-top: percentage( 592 / 1366 );
 
                 @include mq( tab ){
-                    padding-top: percentage( 460 / 375 );
+                    padding-top: percentage( 920 / 840 );
                 }                
 
                 &:before{
@@ -126,7 +126,7 @@
                     left: 0;
                     bottom: 0;
                     display: block;
-                    mix-blend-mode: hue;
+                    mix-blend-mode: screen;
                     transition: transition();
                     transition-delay: 0.7s;
                     background-color: $orange;
@@ -281,30 +281,28 @@
         }
     }
 
-    .section--copy{
-        &.-on .copy{
-            div span{
-               transform: translateY(0);
-           }
 
-           &__en div:after{
-                width: 0;
-           }
-
-           &__en:after{
-               width: 100%;
-           }
-
-           &__ja:before{
-                width: 0;
-           }
-
-           &__ja span{
-               opacity: 1;
-               transform: translateY(0);
-
-           }            
+    .section--copy.-on .copy{
+        div span{
+            transform: translateY(0);
         }
+
+        &__en div:after{
+            width: 0;
+        }
+
+        &__en:after{
+            width: 100%;
+        }
+
+        &__ja:before{
+            width: 0;
+        }
+
+        &__ja span{
+            opacity: 1;
+            transform: translateY(0);
+        }            
     }
 
 
@@ -329,6 +327,7 @@
 
     //////// concept
     .section--concept{
+        overflow: hidden;
         position: relative;
 
         .wrap{
@@ -340,11 +339,12 @@
             &__index{
                 writing-mode: vertical-rl;
                 position: absolute;
+                z-index: 1;
                 top: 0;
                 right: 0;
 
                 @include mq( tab ){
-                    position: static;
+                    position: relative;
                     writing-mode: horizontal-tb
                 }                 
             }
@@ -422,11 +422,15 @@
             bottom: 0;
             left: 0;
             display: block;
-            mix-blend-mode: overlay;
+            mix-blend-mode: multiply;
             // fill: #f6ece6;
 
                 @include mq( tab ){
                     right: -70%;
+                    // bottom: auto;
+                }               
+                @include mq( sp ){
+                    // right: -50%;
                     // bottom: auto;
                 }               
 
@@ -435,7 +439,7 @@
                 transform: translate3d(0,0,0);
 
                 @include mq( tab ){
-                    transform: rotate( -90deg ) scale( 3 );
+                    transform: rotate( -90deg ) scale( 1.5 );
                 }                   
             }
 
