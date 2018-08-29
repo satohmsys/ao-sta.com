@@ -38,7 +38,7 @@ import './fullcalendar-3.9.0/gcal.min.js';
 			
 			if ($bridge_offset < $scrollBottom && $scrollVal < $bridge_bottom ){
 				$bridge.css( {
-					'background-position': '50% ' + ( $scrollVal / -8 ) + 'px'   
+					'background-position': '50% ' + (0 +  $scrollVal / 30 ) + '%'   
 				});
 			}
 
