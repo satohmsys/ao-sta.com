@@ -2,9 +2,6 @@ import $ from 'jquery';
 import { getScrollVal, $w } from './common.js';
 import 'slick-carousel';
 
-import './fullcalendar-3.9.0/lib/moment.min.js';
-import './fullcalendar-3.9.0/fullcalendar.min.js';
-import './fullcalendar-3.9.0/gcal.min.js';
 
 // var effefcts = () => {
 	$( function(){
