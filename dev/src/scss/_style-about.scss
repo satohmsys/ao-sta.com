@@ -1,0 +1,28 @@
+@import "colors.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+////////////////////////////////////////
+
+
+// about
+
+
+////////////////////////////////////////
+.subpage--about{
+
+
+////////////////////
+
+// mainvisual
+
+////////////////////
+
+.mv{
+    &__img{
+        background-image: url(../img/about-mv.jpg);
+    }    
+}
+
+
+}

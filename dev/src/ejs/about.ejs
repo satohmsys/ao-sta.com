@@ -1,0 +1,23 @@
+<% 
+	include( '_include/_function.ejs' );
+	$path = './';
+	$active = 'about';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="subpage subpage--about">
+	<%- include( '_include/header.ejs' ); %>
+	<main>
+		<section class="mv">
+			<div class="mv__img">				
+				<span class="mv__index--en">
+					<span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>/span>
+			</div>
+			<h1 class="mv__index--ja">施設概要</h1>
+		</section>
+	</main>
+
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>
