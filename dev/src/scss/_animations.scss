@@ -16,3 +16,14 @@
         transform: scale( 1.035 ) translateX( -1.25vw );
     }
 }
+
+@keyframes mvZoomHighres{
+    0%{
+        transform-origin: center center;
+        transform: scale( 1 ) translateX( 0 );
+    }
+    100%{
+        transform-origin: center center;
+        transform: scale( 1.1 ) translateX( -1.5vw );
+    }
+}
