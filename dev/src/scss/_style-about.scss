@@ -25,4 +25,48 @@
 }
 
 
+
+////////////////////
+
+// services
+
+////////////////////
+
+
+.services{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+
+	.service{
+		width: calc( 50% - 25px );
+		margin-bottom: 50px;
+		list-style: none;
+		
+		&:nth-child( 2n ){
+			margin-right: 0;
+		}
+
+
+		&__img{
+			text-align: center;
+			
+		}
+
+		&__index{
+			text-align: center;
+			color: $color_text_index_s;
+			font-size: $fontsize_index_s;
+			font-weight: 900;
+		}
+	}
+}
+
+
+
 }

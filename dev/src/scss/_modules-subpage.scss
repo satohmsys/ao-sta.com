@@ -36,21 +36,25 @@
 		font-family: $fontFamily_en;
 		font-weight: 900;
 		color: #fff;
+		
+		@include mq( 1680, min ){
+			font-size: 15vw;
+		}
 
 		span{
 			line-height: 0;
 			display: inline-block;
 		}
-		@at-root .mv.js-effect .mv__index--en span{
+		&.js-effect .mv__index--en span{
 			transform: translateY(100%);
 			transition: transition();
 		}
-		@at-root .mv.-on .mv__index--en span{
+		&.-on .mv__index--en span{
 			transform: translateY(0%);
 		}		
 		
         @for $i from 0 through 4 {
-            @at-root .mv.js-effect .mv__index--en span:nth-child( #{$i} ) {
+            &.js-effect .mv__index--en span:nth-child( #{$i} ) {
                 transition-delay: #{0.08*$i + 1}s;
             }
         }
