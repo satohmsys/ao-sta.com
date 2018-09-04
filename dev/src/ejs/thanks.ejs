@@ -1,0 +1,42 @@
+<% 
+	include( '_include/_function.ejs' );
+    $path = './';
+    $meta.title="お問い合わせ完了｜青森スタートアップセンター";    
+	$active = 'contact';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="subpage subpage--contact">
+	<%- include( '_include/header.ejs' ); %>
+	<main>
+		<section class="mv">
+			<div class="wrap">
+				<div class="mv__copy">
+					<div class="mv__copy--en js-effect">
+                         <span>T</span><span>H</span><span>A</span><span>N</span><span>K&nbsp;</span><span>Y</span><span>O</span><span>U</span><span>.</span>
+                    </div>
+					<h1 class="mv__copy--ja">お問い合わせ完了</h1>
+					<div class="mv__description">
+                        <p>
+                            お問い合わせいただき、誠にありがとうございます。<br>
+                            内容は送信されました。 後日、担当者からお返事をさせていただきます。<br>
+                            万が一連絡がない場合は、恐れ入りますが、<br>
+                            電話（<a href="tel:017-734-1311">017-734-1311</a>）よりご連絡をいただけますと幸いです。
+                        </p>
+                        <p>3秒後にトップページに自動転送されます。転送が始まらない場合はクリックで別のページへ移動してください。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<%- include( '_include/_module-subpagefooter.ejs' ) %>
+	</main>    
+	<%- include( '_include/footer.ejs' ); %>
+    <script>
+        setTimeout( function(){
+            var top = location.href.replace( /thanks.html/, '' );
+            location.href= top;
+        }, 3000 )
+    </script>
+</body>
+</html>
