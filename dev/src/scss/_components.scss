@@ -19,24 +19,41 @@
 	position: relative;
 	display: block;
 	letter-spacing: 0.2em;
+	border: none;
 	font-weight: 700;	
 	text-align: center;
 	font-family: $fontFamily;
 	color: #fff;
 	background-color: $color_button;
+	transition: transition();
+	overflow: hidden;
+
+	&:after{
+		content: " ";
+		width: 0;
+		height: 100%;
+		transition: transition( );
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba( $brown, 0.05 );
+	}
+
+	@include mouseOver(){
+		opacity: unset;
+		&:after{
+			width: 100%;
+			left: 0;
+			right: auto;
+			// opacity: 1;
+			background-color: rgba( #fff, 0.05 );
+		}
+	}
 	
 	@include mq( sp ){
 		padding: 25px 10px;
 	}	
-
-	@include mouseOver(){
-		opacity: 0.75;
-		&:before{
-			width: 0;
-			right: 0;
-			left: auto;
-		}
-	}
 }
 
 .button{
@@ -46,8 +63,20 @@
 		width: auto;
 	}	
 
-	a{
+	a,
+	button{
 		@extend %buttonStyle;
+	}
+
+	button{
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.button--undo{
+	a,button{
+		background-color: $brown_ash;
 	}
 }
 
