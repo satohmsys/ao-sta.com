@@ -1,0 +1,47 @@
+button.mfp_next,button.mfp_prev {
+	font-size: 18px;
+	margin: 10px;
+	padding: 5px 10px;
+}
+button.mfp_next {
+	float: right;
+}
+button.mfp_prev {
+	float: left;
+}
+
+ul#mfp_phase_stat {
+	padding: 10px;
+	text-align: center;
+}
+ul#mfp_phase_stat li {
+	display: inline-block;
+	padding: 8px 15px;
+	border-radius: 5px;
+	margin: 0px 5px;
+	list-style: none;
+	font-size: 14px;
+}
+ul#mfp_phase_stat li.mfp_phase_arrow {
+	box-shadow: none;
+	color: #999;
+	padding: 8px 0px;
+}
+ul#mfp_phase_stat li.mfp_active_phase {
+	box-shadow: 0px 1px 6px #000;
+	background-image: url(_images/mfp_header.png);
+	background-size: 100% 100%;
+	background-color: #0068B7;
+	border: solid 2px #0068B7;
+	font-weight: bolder;
+	color: #FFF;
+	text-shadow: 0px 1px 3px #000;
+}
+ul#mfp_phase_stat li.mfp_inactive_phase {
+	background-image: url(_images/mfp_header.png);
+	background-size: 100% 100%;
+	background-color: #EEE;
+	border: solid 2px #EEE;
+	color: #999;
+	box-shadow: 0px 1px 6px #CCC;
+}

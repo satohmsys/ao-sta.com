@@ -1,0 +1,54 @@
+div#mfp_OperationCheck {
+	
+}
+div#mfp_OperationCheck div#mfp_OperationCheck_inner {
+	display: none;
+}
+div#mfp_OperationCheck strong {
+	background: #090;
+	display: block;
+	color: #222;
+	text-align: center;
+	border-radius: 3px;
+}
+div#mfp_OperationCheck * {
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+}
+div#mfp_OperationCheck p {
+	padding: 0px 5px;
+	margin: 0px;
+	font-size: 12px;
+}
+div#mfp_OperationCheck p a {
+	color: #0C0;
+	text-decoration: none;
+}
+div#mfp_OperationCheck p a:hover,
+div#mfp_OperationCheck p button:hover {
+	text-decoration: underline;
+}
+div#mfp_OperationCheck p button {
+	border: none;
+	background: none;
+	color: #0C0;
+	cursor: pointer;
+}
+div#mfp_OperationCheck div#mfp_OperationCheck_inner ul {
+	
+}
+div#mfp_OperationCheck ul li,
+div#mfp_OperationCheck ul li label,
+div#mfp_OperationCheck ul li label input {
+	line-height: 12px;
+	font-size: 12px;
+	list-style: none;
+	vertical-align: middle;
+}
+div#mfp_OperationCheck ul li {
+	padding: 5px 10px;
+}
+div#mfp_OperationCheck ul li label {
+	text-decoration: underline;
+}

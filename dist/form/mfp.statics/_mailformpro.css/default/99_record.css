@@ -1,0 +1,41 @@
+button#mfp_recorder_record,
+button#mfp_recorder_clear,
+button#mfp_recorder_restore {
+	border-radius: 5px;
+	padding: 5px 10px 5px 2em;
+	border: solid 1px #CCC;
+	background: gradient(linear, center top, center bottom, from(#FEFEFE), to(#DEDEDE));
+	background: -webkit-gradient(linear, center top, center bottom, from(#FEFEFE), to(#DEDEDE));
+	background: -moz-linear-gradient(top, #FEFEFE, #DEDEDE);
+	background: -ms-linear-gradient(top, #FEFEFE 0%, #DEDEDE 100%);
+	text-shadow: 0px 2px 0px #FFF;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+	display: inline-block;
+	margin: 5px auto;
+}
+button#mfp_recorder_record {
+	background: url(_images/mfp_record_disabled.png) no-repeat 5px center #EEE;
+	background-size: 24px 24px;
+}
+button#mfp_recorder_clear {
+	background: url(_images/mfp_record_remove.png) no-repeat 5px center #EEE;
+	background-size: 24px 24px;
+}
+button#mfp_recorder_restore {
+	background: url(_images/mfp_record_restore.png) no-repeat 5px center #EEE;
+	background-size: 24px 24px;
+}
+button.enabled#mfp_recorder_record,
+button.enabled#mfp_recorder_clear,
+button.enabled#mfp_recorder_restore {
+	background: url(_images/mfp_record_enabled.png) no-repeat 5px center #EEE;
+	background-size: 24px 24px;
+}
+div#mfp_recorder_wrap {
+	border: solid 1px #CCC;
+	padding: 10px;
+	text-align: center;
+	margin: 5px auto;
+}

@@ -1,0 +1,6 @@
+td.request_image {
+	width: 100px;
+}
+td.request_image img {
+	max-width: 100px;
+}

@@ -1,0 +1,23 @@
+span.mfp_tips {
+	background-image: url(_images/mfp_header.png);
+	background-size: 100% 100%;
+	background-color: #FCC;
+	display: block;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 2px;
+	box-shadow: 0px 2px 10px #999;
+}
+span.mfp_tips strong {
+	color: #800040;
+}
+span.mfp_tips span {
+	display: block;
+	padding: 10px;
+	color: #008080;
+}
+span.mfp_tips em {
+	font-style: normal;
+	color: #090;
+	font-weight: bold;
+}
