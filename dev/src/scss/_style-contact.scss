@@ -11,8 +11,6 @@
 ////////////////////////////////////////
 .subpage--contact{
 
-	$ltsp: 0.15em;
-
 
 ////////////////////
 
@@ -21,7 +19,68 @@
 ////////////////////
 
 .mv{
-       
+
+    .wrap{
+        padding-top: 160px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mq( sp ){
+            height: auto;
+            padding-top: $space_m_sp*2;
+            padding-bottom: $space_m_sp;
+            background-color:rgba( $basefontColor,0.03);
+            
+        }        
+    }
+
+    &__copy--en{
+        line-height: 1;
+        margin-bottom: $space_s;
+        font-family: $fontFamily_en;
+        font-size: $fontsize_index_l;
+        font-weight: 900;
+        color: $color_text_index_s;
+
+
+        @include mq( sp ){
+            // font-size: $fontsize_index_l_sp;
+        }
+
+
+		span{
+			// line-height: 0;
+			display: inline-block;
+		}
+		&.js-effect span{
+			transform: translateY(10px);
+			opacity: 0;
+			transition: transition();
+		}
+		&.-on span{
+            opacity: 1;
+			transform: translateY(0);
+		}		
+		
+        @for $i from 0 through 10 {
+            &.js-effect span:nth-child( #{$i} ) {
+					transition-delay: #{0.05*$i}s;
+            }
+        }        
+    }
+
+    &__copy--ja{
+        line-height: 1;
+        margin-bottom: $space_s;
+        font-weight: 900;
+    }
+
+    &__desciption{
+        line-height: 2;
+    }
+
 }
 
 
