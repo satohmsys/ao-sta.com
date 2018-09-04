@@ -105,7 +105,35 @@
 }
 
 
+//////////////////////////////////
 
+// section
+
+//////////////////////////////////
+
+.section{
+    letter-spacing: 0.15em;
+	&__index{
+		line-height: 1;
+		margin-bottom: $space_m;
+		font-weight: 900;
+		font-size: $fontsize_index_l;
+		color: $color_text_index_s;
+
+		@include mq( tab ){
+			font-size: $fontsize_index_l_sp;
+			margin-bottom: $space_s;
+		}		
+    }	
+}
+
+
+
+//////////////////////////////////
+
+// 下層フッター
+
+//////////////////////////////////
 .section--contentsColmun{
 
 	margin-top: 200px;
