@@ -11,8 +11,6 @@
 ////////////////////////////////////////
 .subpage--events{
 
-	$ltsp: 0.15em;
-
 
 .section{
     
@@ -55,7 +53,13 @@
 
 	// @include mq( tab ){
 	// 	margin-top: $space_l_sp;
-    // }	
+    // }
+    
+    .section{
+        &__index{
+            font-family: $fontFamily;            
+        }
+    }
     
     &__section{
         margin-top: $space_m;
@@ -184,6 +188,7 @@
             dd{
                 font-size: 2em;
                 color: $brown;
+                font-family: $fontFamily_en;
            
            
                 @include mq( sp ){
