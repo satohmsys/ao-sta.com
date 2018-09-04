@@ -332,7 +332,7 @@
 
     //////// concept
     .section--concept{
-        overflow: hidden;
+        // overflow: hidden;
         position: relative;
 
         .wrap{
@@ -451,12 +451,12 @@
         
             path{
                 stroke: #999;
-                stroke-dasharray: #{1783 };
-                stroke-dashoffset: -#{1783 };
-                transition: all 3s linear 0s;
-                 transition: stroke-dasharray 1s linear 1s,
-                        stroke-dashoffset 1s linear 1s, 
-                        fill 0.5s linear 3s;
+                // stroke-dasharray: #{1783 };
+                // stroke-dashoffset: -#{1783 };
+                // transition: all 3s linear 0s;
+                //  transition: stroke-dasharray 1s linear 1s,
+                //         stroke-dashoffset 1s linear 1s, 
+                //         fill 0.5s linear 3s;
             }
 
             .-on{
