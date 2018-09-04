@@ -1,0 +1,117 @@
+<% 
+	include( '_include/_function.ejs' );
+    $path = './';
+    $meta.title="イベント・セミナー利用について｜青森スタートアップセンター";
+	$active = 'about';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="subpage subpage--events">
+	<%- include( '_include/header.ejs' ); %>
+	<main>
+		<section class="mv ">
+			<div class="mv__img">				
+				<span class="mv__index--en js-effect">
+                    <span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span>
+                </span>
+			</div>
+			<div class="wrap">
+				<h1 class="mv__index--ja">イベント・セミナー利用<br class="-only-sp">について</h1>
+			</div>
+		</section>
+		<section class="section section--howto">
+			<div class="wrap">
+				<h2 class="section__index js-effect"><span><span>ご利用申し込み方法</span></span></h2>
+				<div class="section__content">
+                    <div class="inner">
+                        <section class="section--howto__section">
+                            <ol class="howtoList">
+                                <li>
+                                    貸室申込書にご記入の上、FAXまたはメールにてお申し込みください。
+                                </li>
+                                <li>
+                                    ご利用の10営業日前までにお申し込みください。
+                                </li>
+                            </ol>
+                        </section>
+                        <section class="section--howto__section">
+                             <header class="section--howto__section__index">
+                                 以下の場合にはご利用をお断りまたは中止することがあります。
+                             </header>
+                            <ol class="howtoList">
+                                <li>
+                                    貸室申込の使用目的欄に記載した用途以外に使用する場合
+                                </li>
+                                <li>
+                                    入館者、テナント等入居者、他施設利用者等に迷惑を及ぼす行為、または不快の念を抱かせる行為があった場合
+                                </li>
+                                <li>
+                                    宝飾・絵画の展示会、有料講演会等明らかに営利目的で使用すると認められる場合
+                                </li>
+                                <li>
+                                    青森商工会議所の管理運営に支障があると認められた場合
+                                </li>
+                                <li>
+                                    定員をオーバーして使用した場合
+                                </li>
+                                <li>
+                                    その他事務局が不適当と判断した場合
+                                </li>
+                            </ol>
+                        </section>
+                        <section class="section--howto__buttons">
+                            <div class="buttons">
+                                <div class="button"><a href="">利用要項をダウンロード</a></div>
+                                <div class="button"><a href="">貸室申込書ダウンロード</a></div>
+                            </div>
+                        </section>
+                        <section class="section--howto__contact">
+                            <h3 class="section--howto__contact__index">
+                                 お申込み先
+                            </h3>
+                            <dl class="section--howto__contact__table">
+                                <dt>TEL:</dt>
+                                <dd>
+                                    017-734-1311
+                                </dd>
+                            </dl>
+                            <dl class="section--howto__contact__table">
+                                <dt>FAX:</dt>
+                                <dd>
+                                    017-734-1311
+                                </dd>
+                            </dl>
+                            <dl class="section--howto__contact__table">
+                                <dt>MAIL:</dt>
+                                <dd>
+                                    staff@acci.or.jp
+                                </dd>
+                            </dl>
+    
+                        </section>
+                    </div>
+				</div>				
+			</div>
+		</section>		
+        <section class="section section--schedule">
+            <header>
+                <h2 class="section__index js-effect">
+                    <span><span>SCHEDULE</span></span><br>
+                    <span class="section__index__description">
+                        <span>会館セミナー、イベントカレンダー</span>
+                    </span>
+                </h2>
+            </header>
+            <div class="section__content">
+                <div id='calendar'></div>
+                <div class="button">
+                    <a href="">利用についてのお問い合わせ</a>
+                </div>
+            </div>
+        </section>
+		<%- include( '_include/_module-subpagefooter.ejs' ) %>
+	</main>
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>
