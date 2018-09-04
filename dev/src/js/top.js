@@ -9,7 +9,7 @@ import 'slick-carousel';
 		$('.mv__imgs').slick({
 			arrows: false,
 			autoplay: true,
-			autoplayspeed: 0,
+			autoplayspeed: 700,
 			dots: false,
 			infinite: true,
 			pause: 5000,
@@ -19,11 +19,11 @@ import 'slick-carousel';
 		});
 
 		
-		const 	$bridge = $('.section--concept__location'),
-		$bridge_offset = $bridge.offset().top,
-		$bridge_bottom = $bridge.outerHeight() + $bridge_offset,
-		$a = $('.section--concept__a'),
-		$a_offset = $a.offset().top;
+		const $bridge = $('.section--concept__location'),
+				$bridge_offset = $bridge.offset().top,
+				$bridge_bottom = $bridge.outerHeight() + $bridge_offset,
+				$a = $('.section--concept__a'),
+				$a_offset = $a.offset().top;
 		let $a_pathlength = 0;
 
 		$a.find( 'path' ).each(function (i) {
