@@ -8,6 +8,7 @@ scripts
 /**
 * html監視設定
 */
+import './src/ejs/contact.ejs'; 
 import './src/ejs/about.ejs'; 
 import './src/ejs/index.ejs'; 
 /**
