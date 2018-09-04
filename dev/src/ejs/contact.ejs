@@ -25,8 +25,50 @@
 			</div>
 		</section>
 		<section class="section section--contact">
-			<div class="inner">
-
+			<div class="wrap">
+				<div
+					<form id="mailformpro" class="formTable" action="form/mailformpro/mailformpro.cgi" method="POST">
+						<dl class="formTable__row">
+							<input type="hidden" name="お名前" value="">
+							<dt class="mfp must">お名前 </dt>
+							<dd class="mfp">
+								<input type="text" name="姓名" data-kana="セイメイ" required="required">
+							</dd>
+						</dl>
+						<dl class="formTable__row">
+							<dt class="mfp must">フリガナ</dt>
+							<dd class="mfp"><input type="text" name="メイ"	data-charcheck="kana"></dd>
+						</dl>	
+						<dl class="formTable__row">
+							<dt class="mfp must">性別</dt>
+							<dd class="mfp">
+								<label class="formTable__radio"><input type="radio" name="性別" value="男性"><i></i>男性</label>
+								<label class="formTable__radio"><input type="radio" name="性別" value="女性"><i></i>女性</label>
+								<label class="formTable__radio"><input type="radio" name="性別" value="回答しない"><i></i>回答しない</label>
+							</dd>
+						</dl>
+						<dl class="formTable__row">
+							<input type="hidden" name="mfp_separator_01" value="\n【メールアドレス】\n">
+							<dt class="mfp must">メールアドレス</dt>
+							<dd class="mfp"><input type="email" data-type="email" name="email" required="required"></dd>
+						</dl>	
+						<dl class="formTable__row">
+							<dt class="mfp must">メールアドレス<br>（確認用）</dt>
+							<dd class="mfp"><input type="email" data-type="email" name="confirm_email" data-post-disable="1" size="40" required="required"></dd>
+							<input type="hidden" name="mfp_separator_02" value="\n【備考欄】\n">
+						</dl>
+						<div class="formTable__row--button">
+							<div class="mfp_buttons buttons">
+								<div class="button button--undo">
+									<button type="reset">リセット</button>
+								</div>
+								<div class="button">
+									<button type="submit">送信する</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<script type="text/javascript" id="mfpjs" src="form/mailformpro/mailformpro.cgi" charset="UTF-8"></script>
 			</div>
 		</section>
 	
