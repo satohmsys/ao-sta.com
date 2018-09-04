@@ -12,15 +12,36 @@
 
 
 .mv{
+
+	margin-bottom: $space_l;
+
+	@include mq( tab ){
+		margin-bottom: $space_m_sp;
+	}		
+
 	&__img{
-		width: 100%;
-		height: 0;
 		overflow: hidden;
-		padding-top: percentage( 592 / 1366 );
-		background-size: 100% auto;
-		background-position: center center;
-		background-repeat: no-repeat;
 		position: relative;
+		
+		&:after{
+			content: " ";
+			display: block;
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			padding-top: percentage( 592 / 1366 );
+			background-size: 100% auto;
+			background-position: center center;
+			background-repeat: no-repeat;
+
+			animation: bgZoom 5s ease 0s 1 normal both;
+
+			@include mq( tab ){
+				padding-top: percentage( 310 / 375 );
+			}			
+		}
+		
+
 	}
 
 	&__index--en{
@@ -28,6 +49,7 @@
 		line-height: 1;
 		display: block;
 		position: absolute;
+		z-index: 1;
 		right: -0.25em;
 		bottom: -0.25em;
 		text-align: right;
@@ -41,21 +63,27 @@
 			font-size: 15vw;
 		}
 
+		@include mq( tab ){
+			font-size: 5rem;
+		}		
+
+
 		span{
-			line-height: 0;
+			// line-height: 0;
 			display: inline-block;
 		}
-		&.js-effect .mv__index--en span{
+		&.js-effect span{
 			transform: translateY(100%);
+			// opacity: 0;
 			transition: transition();
 		}
-		&.-on .mv__index--en span{
-			transform: translateY(0%);
+		&.-on span{
+			transform: translateY(0);
 		}		
 		
-        @for $i from 0 through 4 {
-            &.js-effect .mv__index--en span:nth-child( #{$i} ) {
-                transition-delay: #{0.08*$i + 1}s;
+        @for $i from 0 through 10 {
+            &.js-effect span:nth-child( #{$i} ) {
+                transition-delay: #{0.05*$i + 0.5}s;
             }
         }
 
@@ -68,6 +96,30 @@
 		text-align: right;
 		font-weight: 900;
 		font-size: $fontsize_index_l;
+
+		@include mq( tab ){
+			margin-top: 30px;
+			font-size: $fontsize_index_l_sp;
+		}			
+	}
+}
+
+
+
+.section--contentsColmun{
+
+	margin-top: 200px;
+
+	@include mq( tab ){
+		margin-top: $space_l_sp;
+	}
+
+
+	.section--information{
+		margin-top: 0;
+		@include mq( tab ){
+			margin-top: $space_m_sp;
+		}
 	}
 }
 

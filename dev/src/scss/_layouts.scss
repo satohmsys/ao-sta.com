@@ -14,7 +14,7 @@
 
 
 //////// カラムレイアウト
-.section--contentsColmun .wrap{
+.section--contentsColmun > .wrap{
 
 	@include mq( tab, min ){
 		display: flex;

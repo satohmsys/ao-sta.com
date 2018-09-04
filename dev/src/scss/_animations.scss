@@ -27,3 +27,19 @@
         transform: scale( 1.1 ) translateX( -1.5vw );
     }
 }
+
+
+
+@keyframes bgZoom{
+    0%{
+        width: calc( 100% + 3px) ;
+        filter: blur( 3px );
+        background-size: 104% auto;
+    }
+    100%{
+        width: 100%;
+        filter: blur( 0px );
+
+        background-size: 100% auto;
+    }
+}

@@ -248,8 +248,13 @@ body{
 ////////////////////
 
 .siteFooter{
+	margin-top: 200px;
 	text-align: center;
 	background-color: #ffffff;
+
+	@include mq( tab ){
+		margin-top: $space_l_sp;
+	}
 
 	a{
 		color: inherit;
