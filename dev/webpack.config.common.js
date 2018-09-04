@@ -134,7 +134,13 @@ let config = {
 			// favicon: './src/img/common/favicon.ico',
 			template: './src/ejs/events.ejs',
 			// inject: 'head',
-		}),				
+		}),	
+		new HtmlWebpackPlugin({
+			filename: 'contact.html',
+			// favicon: './src/img/common/favicon.ico',
+			template: './src/ejs/contact.ejs',
+			// inject: 'head',
+		}),						
 
 	],
 

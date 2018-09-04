@@ -1,0 +1,38 @@
+<% 
+	include( '_include/_function.ejs' );
+    $path = './';
+    $meta.title="お問い合わせ｜青森スタートアップセンター";    
+	$active = 'contact';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="subpage subpage--contact">
+	<%- include( '_include/header.ejs' ); %>
+	<main>
+		<section class="mv">
+			<div class="wrap">
+				<div class="mv__copy">
+					<div class="mv__copy--en">
+						 <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span>
+					</div>
+					<h1 class="mv__copy--ja">お問い合わせ</h1>
+					<div class="mv__description">
+		ご不明な点やご質問がありましたら、下記のフォームもしくは<br>
+		電話（<a href="tel:017-734-1311">017-734-1311</a>）にてお尋ねください。
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section--contact">
+			<div class="inner">
+
+			</div>
+		</section>
+	
+		<%- include( '_include/_module-subpagefooter.ejs' ) %>
+	</main>
+
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>
