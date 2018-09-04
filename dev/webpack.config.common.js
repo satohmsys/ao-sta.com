@@ -123,12 +123,18 @@ let config = {
 			template: './src/ejs/index.ejs',
 			// inject: 'head',
 		}),
-       new HtmlWebpackPlugin({ 
+		new HtmlWebpackPlugin({
 			filename: 'about.html',
 			// favicon: './src/img/common/favicon.ico',
 			template: './src/ejs/about.ejs',
 			// inject: 'head',
-		}),		
+		}),	
+		new HtmlWebpackPlugin({
+			filename: 'events.html',
+			// favicon: './src/img/common/favicon.ico',
+			template: './src/ejs/events.ejs',
+			// inject: 'head',
+		}),				
 
 	],
 
