@@ -332,8 +332,11 @@
 
     //////// concept
     .section--concept{
-        // overflow: hidden;
         position: relative;
+        
+        @include mq( tab ){
+            overflow: hidden;
+        }         
 
         .wrap{
             position: relative;
