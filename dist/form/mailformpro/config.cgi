@@ -35,7 +35,7 @@ $config{'SerialFormat'} = '<date>%04d';
 $config{'SerialBoost'} = 0;
 
 ## サンクスページのURL(URLかsend.cgiから見た相対パス)
-$config{'ThanksPage'} = '../thanks.html?no=%s';
+$config{'ThanksPage'} = '../../thanks.html?no=%s';
 
 ## 設置者に届くメールの件名
 $config{'subject'} = '[ %s ] お問い合せフォームから';
@@ -146,7 +146,7 @@ $config{'DisableURI'} = 0;
 $config{'dir.AddOns'} = './add-ons/';
 
 @AddOns = ();
-push @AddOns,'OperationCheck.js';		## 動作チェック ※本番では消してください
+#push @AddOns,'OperationCheck.js';		## 動作チェック ※本番では消してください
 push @AddOns,'charactercheck.js';		## 文字校正
 push @AddOns,'prefcode/prefcode.js';	## 郵便番号からの住所入力
 #push @AddOns,'prefcodeadv/prefcode.js';## 郵便番号からの住所入力(高機能・高負荷)
@@ -169,11 +169,11 @@ push @AddOns,'toggle.js';				## 入力欄の可変
 #push @AddOns,'WadaVoiceDemo.js';		## (技術デモ)音声ガイダンス
 #push @AddOns,'progress.js';			## プログレスバー表示
 #push @AddOns,'WTKConnect.js';			## WebsiteToolKit.jsとの連動
-#push @AddOns,'submitdisabled.js';		## エラー時に送信ボタンを無効化
+push @AddOns,'submitdisabled.js';		## エラー時に送信ボタンを無効化
 #push @AddOns,'sizeajustdisabled.js';	## 入力欄の自動調整機能を無効化
 #push @AddOns,'defaultValue.js';		## 初期値を無効
 #push @AddOns,'estimate.js';			## 見積計算(ベータ版)
-#push @AddOns,'beforeunload.js';		## ページを離脱する際のアラート(ベータ版)
+push @AddOns,'beforeunload.js';		## ページを離脱する際のアラート(ベータ版)
 #push @AddOns,'setValue.js';			## 初期値をセット
 #push @AddOns,'errorScroll.js';			## エラー時に対象エレメントまでスクロール(ベータ版)
 #push @AddOns,'reserve.js';				## 予約受付 [New]
@@ -181,7 +181,7 @@ push @AddOns,'toggle.js';				## 入力欄の可変
 #push @AddOns,'pricefactor.js';			## 人数分の料金掛け算
 #push @AddOns,'tax.js';					## 消費税計算 [New]
 #push @AddOns,'email.js';				## メールアドレスのチェック(やや厳格)
-#push @AddOns,'confirm.js';				## [New] 確認用エレメント
+push @AddOns,'confirm.js';				## [New] 確認用エレメント
 #push @AddOns,'record.js';				## [New] 記録用
 #push @AddOns,'birthday.js';			## [New] 生年月日選択補助
 #push @AddOns,'unchecked.js';			## [New] radioのチェック解除
