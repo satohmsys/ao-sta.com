@@ -43,3 +43,26 @@
         background-size: 100% auto;
     }
 }
+
+
+@keyframes loading_a{
+    0%{
+        transform:  translateX( 0 );
+    }
+    100%{
+        transform: translateX( -4vw );
+    }
+}
+
+
+@keyframes loading_text{
+    0%{
+        color: $basefontColor;
+    }
+    33%{
+        color: #777777;
+    }
+    70%{
+        color: $brown_ash;
+    }
+}

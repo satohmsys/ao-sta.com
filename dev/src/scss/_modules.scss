@@ -491,3 +491,169 @@ body{
 		font-family: $fontFamily_en;
 	}
 }
+
+
+
+
+////////////////////
+
+// loading Anim
+
+////////////////////
+
+.loadingAnim{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	transition: transition();
+	background-color: #ffffff;
+
+	@at-root .-is-loaded .loadingAnim{
+		width: 0;
+		transition-delay: 1.5s;
+	}
+
+
+	&__content{
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 15%;
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+		box-sizing: border-box;
+		transition: transition();		
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	// @at-root .-is-loaded .loadingAnim__content{
+	// 	opacity: 0;
+	// }	
+
+	&__column{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__row{
+		line-height: 4;
+		font-size: 1.25em;
+		position: relative;
+		letter-spacing: 0.3em;
+		font-feature-settings: 'palt';
+
+		// &:before{
+		// 	content: " ";
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	bottom: 0;
+		// 	background-color: #ffffff;
+		// 	transition: transition();
+		// }
+		
+		// @for $i from 1 through 4 {
+		// 	&:nth-child( #{$i} ){
+		// 		&:before{
+		// 			transition-delay: #{ 0.15 * $i }s;
+		// 		}
+		// 	}
+		// }
+
+		// @at-root .-is-ready .loadingAnim__row:before{
+		// 	width: 0;
+		// }
+
+		.anim{
+			animation: loading_text 2s ease 0.3s infinite alternate both;
+
+			&.lastChar{
+				animation-direction: 5s
+			}
+		}
+
+			span{
+				display: inline-block;
+				opacity: 0;
+				transform: translateY( 10px );
+				transition: transition();
+			}
+			@for $i from 0 through 20 {
+				span:nth-of-type( #{$i} ){
+					transition-delay: #{0.05*$i + 0.3}s;
+				}
+			}
+		@at-root .-is-ready .loadingAnim__row span{
+				opacity: 1;
+				transform: translateY( 00px );
+		}		
+
+		&:nth-child( 2 ){
+			padding-left: 2em;
+		}
+	}
+
+	&__bg{
+		line-height: 0;
+		margin: auto;
+		top: -0vh;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		z-index: -1;
+
+		&:before{
+			content: " ";
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color: #ffffff;
+			transition: transition();
+		}
+		@at-root .-is-ready .loadingAnim__bg:before{
+			width: 0;
+		}
+
+		svg {
+			width: 100%;
+			height: auto;
+			display: block;
+			fill: $skincolor;
+
+			position: absolute;
+			top: -20vh;
+			right: 0;			
+			bottom: -45vw;
+			left: 0;
+
+			animation: loading_a 10s ease 0s 1 normal both;
+		}
+
+	}
+
+
+	.asc{
+		font-size: 0.5em;
+		font-family: $fontFamily_en;
+	}
+}

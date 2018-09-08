@@ -93,16 +93,44 @@ getScrollVal(f2);
 let $loadingAnim = $('.loadingAnim');
 
 if ($loadingAnim) {
-	$loadingAnim.find('.loadingAnim__text').on('transitionend', function () {
-		$loadingAnim.remove();
-		$body.addClass('isRenderered')
-	})
-	$w.on('load', function () {
-		$body.addClass('isLoaded');
-		// $( '.loadingAnim' ).fadeOut('fast', function(){
-		// 	$(this).remove();
-		// })
+	new Promise( function( resolve ){
+		$w.on('load', function () {
+			document.body.classList.add('-is-ready');
+		})
+		return resolve( 1 );
+	}).then(function( resolve ){
+		document.getElementsByClassName('lastChar')[0].addEventListener('transitionend', function (e) {
+			e.stopPropagation();
+			document.body.classList.add('-is-loaded');
+		});
+	}).then( function(){
+			document.getElementsByClassName('loadingAnim')[0].addEventListener('transitionend', function (e) {
+				e.stopPropagation();
+				// console.log( e );
+				// setTimeout(() => {
+					// $loadingAnim.remove();
+				// }, 1500); 
+			});
 	});
+
+	// $w.on( 'load', function(){
+	// 	$( 'body' ).addClass( '-is-ready' );
+
+	// 	$( '.lastChar' ).on('transitionend', function( e ){
+	// 		e.stopPropagation();
+	// 		e.preventDefault();
+
+	// 		$('body').addClass('-is-loaded');
+	// 		setTimeout( function(){
+	// 			$('.loadingAnim').on( 'transitionend' , function( e ){
+	// 				e.stopPropagation();
+		
+	// 				$loadingAnim.remove();
+	// 			});	
+	// 		}, 2000 )
+	// 	});
+	// });
+
 }
 
 /**
