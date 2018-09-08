@@ -21,9 +21,6 @@ if ($( '.section--imgs').length ){
 
 				let $scrollDiff = $scrollBottom - $secOffset;
 
-				console.log( $scrollDiff)
-
-
 				$imgArea.css({
 					'transition' : 'none',
 					// 'transform': 'translateY(' + $scrollVal/ - ($w.width() *0.1) +'px )'
