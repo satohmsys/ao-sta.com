@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+import moment from 'moment';
+import './gcal.min';
+import fullCalendar from 'fullcalendar';
+
 let $w = $(window),
 	$body = $('body'),
 	$flag = true;
@@ -118,15 +122,35 @@ $('a[href^="#"]').click(function (e) {
 });
 
 
+/** 
+* fullcarendar.js
+* @link http://little-braver.com/156/
+*/
+if( $('#calendar').length ){
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next,today',
+			center: 'title',
+			right: 'month,list'
+		},
+		displayEventTime: false,
+		// THIS KEY WON'T WORK IN PRODUCTION!!!
+		// To make your own Google API key, follow the directions here:
+		// http://fullcalendar.io/docs/google_calendar/
+		googleCalendarApiKey: 'AIzaSyCRSAXOHZ9q0_r-8nLa5bgde-WM9KN4Uy8',
+		eventSources: [{
+			googleCalendarId: 'mail.to.deeeeeeeeee@gmail.com'
+		}],
+		eventClick: function (event) {
+			// opens events in a popup window
+			window.open(event.url, 'gcalevent', 'width=700,height=600');
+			return false;
+		}
+	});
+}
+
+
 
 export { $ };
 export { $w };
 export { getScrollVal };
-// export default function () {
-// 	backToTop();
-// 	commonScrollToggle();
-// 	headExpand();
-// 	isLoaded();
-// 	smoothScroll();
-// 	localNavHited();
-// }
