@@ -330,6 +330,36 @@
     }
 
 
+     //////// 2列箇所
+    .section--contentsColmun{
+        position: relative;
+
+        &:after{
+            content:  " ";
+            width: 25vw;
+            height: 25vw;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            z-index: -1;
+            background-color: $skincolor;
+
+            @include mq( tab ){
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+
+        .wrap{
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+
+
+
+
     //////// concept
     .section--concept{
         position: relative;
