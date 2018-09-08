@@ -111,7 +111,7 @@
                 overflow: hidden;
                 padding-top: percentage( 592 / 1366 );
 
-                @include mq( tab ){
+                @include mq( 500 ){
                     padding-top: percentage( 920 / 840 );
                 }                
 
@@ -227,7 +227,8 @@
                 display: block;
                 transform: translateY( 1.25em );
                 transition: transition();
-                transition-delay: 0.1s;
+                // transition-delay: 0.1s;
+                transition-delay: 1.9s;
             }
 
             // @for $i from 0 through 4 {
@@ -244,7 +245,8 @@
                 margin-top: $space_s;
                 display: block;
                 transition: transition();
-                transition-delay: 0.6s;
+                // transition-delay: 0.6s;
+                transition-delay: 2.4s;
                 background-color: $basefontColor;
 
                 @include mq( tab ){
@@ -281,13 +283,14 @@
                 bottom: 0;
                 background-color: #ffffff;
                 transition: transition();
-                transition-delay: 1.05s;
+                // transition-delay: 1.05s;
+                transition-delay: 2.85s;
             }
         }
     }
 
 
-    .section--copy.-on .copy{
+    &.-is-loaded .section--copy.-on .copy{
         div span{
             transform: translateY(0);
         }
