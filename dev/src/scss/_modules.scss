@@ -411,3 +411,83 @@ body{
 		font-size: $fontsize_s;
 	}
 }
+
+
+
+////////////////////
+
+// calender
+
+////////////////////
+
+#calendar{
+
+	.fc-button{
+		
+		height: 4em;
+		text-shadow: none;
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+		font-size: $fontsize_s;
+		color: #ffffff;
+		font-family: $fontFamily_en;
+		background: $color_button;
+
+		@include mq( sp ){
+			height: 3em;
+		}		
+	}
+	.fc-button + .fc-button{
+		margin-left: 10px;
+	}
+	.fc-right .fc-button,
+	.fc-today-button{
+		width: 100px;
+		
+		@include mq( sp ){
+			width: 60px;
+		}	
+
+	}
+	.fc-prev-button,
+	.fc-next-button{
+		width: 4em;
+
+		@include mq( sp ){
+			width: 3em;
+		}			
+	}
+
+	.fc-button + .fc-next-button{
+		margin-left: 1px;
+	}	
+
+	.fc-today-button{
+		@include mq( sp ){
+			display: none;
+		}
+	}
+
+
+	.fc-view-container{
+		font-size: $fontsize_s;
+		background-color: #ffffff;
+	}
+
+
+	.fc-day-header{
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		@include mq( sp ){
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}			
+	}
+	
+
+	.fc-header-toolbar{
+		font-family: $fontFamily_en;
+	}
+}

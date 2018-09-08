@@ -336,14 +336,17 @@
 
         &:after{
             content:  " ";
-            width: 25vw;
-            height: 25vw;
+            width: 40vw;
+            height: 40vw;
             position: absolute;
             top: -40px;
             left: 0;
             z-index: -1;
             background-color: $skincolor;
-
+            @include mq( 1366 ){
+                width: 33.333vw;
+                height: 33.333vw;
+            }
             @include mq( tab ){
                 width: 50vw;
                 height: 50vw;
@@ -356,6 +359,14 @@
         }
     }
 
+
+
+         //////// 2列箇所
+    .section--schedule{
+        .button{
+            margin-top: $space_m;
+        }
+    }
 
 
 
