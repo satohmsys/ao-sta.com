@@ -31,15 +31,15 @@
 						<input type="hidden" name="お名前" value="">
 						<dt class="mfp must">お名前 </dt>
 						<dd class="mfp">
-							<input type="text" name="姓名" data-kana="セイメイ" required="required">
+							<input type="text" name="お名前" data-kana="フリガナ" required="required">
 						</dd>
 					</dl>
 					<dl class="formTable__row">
 						<dt class="mfp must">フリガナ</dt>
-						<dd class="mfp"><input type="text" name="メイ"	data-charcheck="kana"></dd>
+						<dd class="mfp"><input type="text" name="フリガナ" data-charcheck="kana" required="required"></dd>
 					</dl>	
 					<dl class="formTable__row">
-						<dt class="mfp must">性別</dt>
+						<dt class="mfp">性別</dt>
 						<dd class="mfp">
 							<label class="formTable__radio"><input type="radio" name="性別" value="男性"><i></i>男性</label>
 							<label class="formTable__radio"><input type="radio" name="性別" value="女性"><i></i>女性</label>
@@ -53,16 +53,20 @@
 					</dl>	
 					<dl class="formTable__row">
 						<dt class="mfp must">メールアドレス<br>（確認用）</dt>
-						<dd class="mfp"><input type="email" data-type="email" name="confirm_email" data-post-disable="1" size="40" required="required"></dd>
+						<dd class="mfp"><input type="email" data-type="email" name="confirm_email" data-confirm="email" data-post-disable="1" required="required"></dd>
 						<input type="hidden" name="mfp_separator_02" value="\n【備考欄】\n">
+					</dl>
+					<dl class="formTable__row">
+						<dt class="mfp must">お問い合わせ内容</dt>
+						<dd class="mfp"><textarea name="お問い合わせ" required="required"></textarea></dd>
 					</dl>
 					<div class="formTable__row--button">
 						<div class="mfp_buttons buttons">
-							<div class="button button--undo">
-								<button type="reset">リセット</button>
-							</div>
 							<div class="button">
 								<button type="submit">送信する</button>
+							</div>
+							<div class="button button--undo">
+								<button type="reset">リセット</button>
 							</div>
 						</div>
 					</div>

@@ -97,20 +97,34 @@
     max-width: 1000px;
 
     input[ type="text" ],
-    input[ type="email" ]{
-        width: 100%;
-        min-height: 72px;
+    input[ type="email" ],
+    textarea{
+        width: 100%!important;
         box-sizing: border-box;
         padding: 1em;
         border: 1px solid $color_border;
         border-radius: 3px;
     }
+    
+    textarea{
+        min-height: 100px;
+    }
+    input[ type="text" ],
+    input[ type="email" ]{
+        min-height: 72px;        
+    }
+    
+
 
     ///// radio button 列
     &__radio{
 
         margin-right: $space_s;
         cursor: pointer;
+
+        @include mq( sp ){
+            margin-right: 1em;
+        }               
 
         input[ type="radio" ]{
             display: none;
@@ -226,6 +240,105 @@
         }
 
     }
+
+
+    ///////// plugin
+    .mfp_err{
+        margin-top: 5px;
+        padding: 1em;
+        position: relative;
+        font-size: $fontsize_s;
+        font-weight: bold;
+        background-color: $skincolor;
+
+
+        &:empty{
+            display: none;
+        }
+    }
 }
+
+///////// plugin 
+
+    #mfp_hidden,
+    div#mfp_loading{
+        display: none;
+    }
+    div#mfp_loading_screen {
+        max-width: 100%;
+        z-index: 20000;
+        opacity: 0.8;
+        display: none;
+        background-color: #000;
+    }
+    div#mfp_overlay {
+        max-width: 100%;
+        position: absolute;
+        display: none;
+        z-index: 10001;
+    }
+    div#mfp_overlay_background{
+        max-width: 100%;
+        opacity: 0.8;
+        display: none;
+        background-color: $brown;
+    }
+    div#mfp_overlay_inner {
+        background-color: #FFF;
+        padding: $space_s;
+        margin: 0px auto;
+        border-radius: 0px;
+        width: 800px;
+        max-width: 90%;
+    }
+
+    div#mfp_overlay_inner h4{ 
+        font-weight: bold;
+        color: $color_text_index_s;
+    }
+
+
+    #mfp_confirm_table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #mfp_confirm_table th{
+        text-align: left;
+    }
+    #mfp_confirm_table tr{
+          border-bottom: 1px solid $color_border; 
+    }
+    #mfp_confirm_table tr,
+    #mfp_confirm_table th{
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @include mq( sp ){
+            margin-bottom: 20px;
+        }        
+    }
+
+
+    ///// button
+    .mfp_buttons{
+        margin-top: $space_s;
+        display: flex;
+        justify-content: center;
+        @include mq( sp ){
+            margin-top: 20px;
+        }           
+    }
+    #mfp_button_send{
+        width: 50%;
+        @extend %buttonStyle;
+    }
+
+    #mfp_button_cancel{
+        width: 50%;
+        @extend %buttonStyle;
+		background-color: $brown_ash;
+    }
+
 
 }
