@@ -157,7 +157,7 @@
             img{
                 width: 100%;
                 filter: blur(0);
-                animation: mvZoom 10s linear 0s 1 normal both;
+                animation: mvZoom 10s linear 0s 1 reverse both;
                 
 
                 @include mq( 1680,min ){

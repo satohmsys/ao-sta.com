@@ -92,7 +92,7 @@ getScrollVal(f2);
  */
 let $loadingAnim = $('.loadingAnim');
 
-if ($loadingAnim) {
+if ($loadingAnim.length ) {
 	new Promise( function( resolve ){
 		$w.on('load', function () {
 			document.body.classList.add('-is-ready');
