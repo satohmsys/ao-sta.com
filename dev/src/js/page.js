@@ -38,7 +38,7 @@ if ($( '.section--imgs').length ){
 				})
 				$img.css({
 					// 'transform': 'translateY(' + $scrollVal / - ($w.width() * 0.01) + 'px )'
-					'transform': 'translateY(' + $scrollDiff / ($w.width() * -$spread.img) + 'px )'
+					'transform': 'translateY(' + $scrollDiff / ($w.width() * $spread.img) + 'px )'
 				})
 			}
 		})
