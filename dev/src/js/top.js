@@ -19,37 +19,41 @@ import 'slick-carousel';
 		});
 
 		
-		const $bridge = $('.section--concept__location'),
-				$bridge_offset = $bridge.offset().top,
-				$bridge_bottom = $bridge.outerHeight() + $bridge_offset,
-				$a = $('.section--concept__a'),
-				$a_offset = $a.offset().top;
-		let $a_pathlength = 0;
+		const $bridge = $('.section--concept__location');
 
-		$a.find( 'path' ).each(function (i) {
-			$a_pathlength = this.getTotalLength();
-		});		
-		
-		let f = function( $scrollVal ){
-			const $scrollBottom = $scrollVal + $w.height();
+		if( $bridge.length ){
+			let $bridge_offset = $bridge.offset().top,
+			$bridge_bottom = $bridge.outerHeight() + $bridge_offset,
+			$a = $('.section--concept__a'),
+			$a_offset = $a.offset().top,
+			$a_pathlength = 0;
+
+			$a.find( 'path' ).each(function (i) {
+				$a_pathlength = this.getTotalLength();
+			});		
+
+
+			let f = function( $scrollVal ){
+				const $scrollBottom = $scrollVal + $w.height();
+				
+				if ($bridge_offset < $scrollBottom && $scrollVal < $bridge_bottom ){
+					$bridge.css( {
+						'background-position': '50% ' + (0 +  $scrollVal / 30 ) + '%'   
+					});
+				}
+	
+				if( $a_offset * 0.8 < $scrollBottom ){
+					$a.find('path').attr( {style: 'stroke-dasharray:'+ $a_pathlength * 1 + '; ' + 'stroke-dashoffset:' +  $a_pathlength * -1 });
+				}
+	
+				$a.css( {
+					'transform': 'translateY(' + $scrollVal / -6 + 'px' + ')'
+				})				
+			};
 			
-			if ($bridge_offset < $scrollBottom && $scrollVal < $bridge_bottom ){
-				$bridge.css( {
-					'background-position': '50% ' + (0 +  $scrollVal / 30 ) + '%'   
-				});
-			}
-
-			if( $a_offset * 0.8 < $scrollBottom ){
-				$a.find('path').attr( {style: 'stroke-dasharray:'+ $a_pathlength * 1 + '; ' + 'stroke-dashoffset:' +  $a_pathlength * -1 });
-			}
-
-			$a.css( {
-				'transform': 'translateY(' + $scrollVal / -6 + 'px' + ')'
-			})
-			
-		};
+			getScrollVal(f);	
+		}
 		
-		getScrollVal(f);	
 		
 		
 	});

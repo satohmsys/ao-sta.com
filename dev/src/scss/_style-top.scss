@@ -142,7 +142,7 @@
                 right: 0;
                 left: 0;
                 bottom: 0;
-                will-change: filter, transform;
+                will-change: filter;
                 filter: blur( 5px );
                 transition: transition();
                 transition-delay: 0.7s;                
@@ -163,6 +163,10 @@
                 @include mq( 1680,min ){
                     animation-name: mvZoomHighres;
                 }
+                @include mq( 768 ){
+                    animation-name: mvZoomSp;
+                    animation-duration: 5s;
+                }                
             }
         }
     }

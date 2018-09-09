@@ -490,6 +490,11 @@ body{
 	.fc-header-toolbar{
 		font-family: $fontFamily_en;
 	}
+
+
+	.fc-day-top{
+		padding: 0 10px 10px 0;
+	}
 }
 
 
@@ -590,10 +595,11 @@ body{
 		// }
 
 		.anim{
-			animation: loading_text 2s ease 0.3s infinite alternate both;
+			animation: loading_text 1s ease 0.3s infinite alternate both;
 
 			&.lastChar{
-				animation-direction: 5s
+				animation-duration: 0.7s;
+				animation-delay: 0s
 			}
 		}
 
