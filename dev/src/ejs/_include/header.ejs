@@ -14,8 +14,10 @@
 		</<% if( $active!='top'){ %>h1<% }else{ %>div<%}%>>
 		<nav class="siteHeader__nav">
 			<header class="siteHeader__nav__index">
-				<span><img src="<%- $path %>/../img/common-logo.svg" width="200" alt="青森商工議会 青森スタートアップセンター"></span>
-				<span>AOMORI STARTUP CENTER</span>
+				<a href="/">
+					<span><img src="<%- $path %>/../img/common-logo.svg" width="200" alt="青森商工議会 青森スタートアップセンター"></span>
+					<span>AOMORI STARTUP CENTER</span>
+				</a>
 			</header>
 			<%- include( 'nav.ejs' ); %>
 		</nav>
