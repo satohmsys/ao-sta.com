@@ -46,7 +46,18 @@ body{
 			padding-top: 20px;
 			padding-bottom: 20px;
 		}
+	}
+	@include mq( sp ){
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		@at-root .-isScrolled .siteHeader{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 	}		
+	
+	
 	
 	
 	 > .wrap{
@@ -71,7 +82,12 @@ body{
 			img{
 				max-width: 120px;
 			}
-		}			
+		}	
+		@include mq( sp ){
+			img{
+				max-width: 90px;
+			}
+		}					
 	}
 
 	&__nav{
@@ -119,6 +135,11 @@ body{
 					font-size: $fontsize_s;
 				}
 			}
+			@include mq( sp ){			
+				img{
+					max-width: 90px;
+				}
+			}			
 		}
 
 
@@ -365,7 +386,15 @@ body{
 
 		@include mq( tab ){
 				margin-bottom: $space_s_sp;
-			}			
+			}	
+
+		@include mq( sp ){
+			margin-bottom: $space_s_sp;
+
+			img{
+				max-width: 90px;
+			}
+		}							
 	}
 
 	
