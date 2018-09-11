@@ -40,19 +40,21 @@
 		background-color: rgba( $brown, 0.05 );
 	}
 
-	@include mouseOver(){
-		opacity: unset;
-		&:after{
-			width: 100%;
-			left: 0;
-			right: auto;
-			// opacity: 1;
-			background-color: rgba( #fff, 0.05 );
+	@include mq( tab, min ){
+		@include mouseOver(){
+			opacity: unset;
+			&:after{
+				width: 100%;
+				left: 0;
+				right: auto;
+				background-color: rgba( #fff, 0.05 );
+			}
 		}
 	}
 	
 	@include mq( sp ){
 		padding: 25px 10px;
+	
 	}	
 }
 
