@@ -10,14 +10,12 @@
 	<div class="wrap">
 
 		<<% if( $active!='top'){ %>h1<% }else{ %>div<%}%> class="siteHeader__logo">
-			<a href="/"><img src="<%- $path %>/../img/common-logo.svg" width="200" alt="青森商工議会 青森スタートアップセンター"></a>
+			<a href="http://www.acci.or.jp/" target="_blank"><img src="<%- $path %>/../img/common-logo.svg" width="150" alt="青森商工議会 青森スタートアップセンター"></a>
 		</<% if( $active!='top'){ %>h1<% }else{ %>div<%}%>>
 		<nav class="siteHeader__nav">
 			<header class="siteHeader__nav__index">
-				<a href="/">
-					<span><img src="<%- $path %>/../img/common-logo.svg" width="200" alt="青森商工議会 青森スタートアップセンター"></span>
-					<span>AOMORI STARTUP CENTER</span>
-				</a>
+				<span><img src="<%- $path %>/../img/common-logo.svg" width="150" alt="青森商工議会 青森スタートアップセンター"></span>
+				<span>AOMORI STARTUP CENTER</span>
 			</header>
 			<%- include( 'nav.ejs' ); %>
 		</nav>
