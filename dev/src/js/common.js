@@ -165,9 +165,9 @@ if( $('#calendar').length ){
 		// THIS KEY WON'T WORK IN PRODUCTION!!!
 		// To make your own Google API key, follow the directions here:
 		// http://fullcalendar.io/docs/google_calendar/
-		googleCalendarApiKey: 'AIzaSyCRSAXOHZ9q0_r-8nLa5bgde-WM9KN4Uy8',
+		googleCalendarApiKey: 'AIzaSyA2GEYckx_MNqE6fRMogXgBYUHG2T5C248',
 		eventSources: [{
-			googleCalendarId: 'mail.to.deeeeeeeeee@gmail.com'
+			googleCalendarId: 'aomoristartupcenter@gmail.com'
 		}],
 		eventClick: function (event) {
 			// opens events in a popup window

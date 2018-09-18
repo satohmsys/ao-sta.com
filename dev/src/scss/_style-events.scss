@@ -210,6 +210,10 @@
 .section--schedule{
     margin-top: $space_l;
 
+    #calendar{
+        max-width: 1000px!important;
+    }
+
 }
 
 
