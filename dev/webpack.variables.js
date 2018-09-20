@@ -10,8 +10,8 @@ module.exports = {
 	enabledSourceMap : true,
 	PATHS : {
 		dir: {
-			// output: 'asc/assets'			
-			output: 'assets'
+			output: 'asc/assets'			
+			// output: 'assets'
 		},
 		devServer: {
 			contentBase: 'dist' 
