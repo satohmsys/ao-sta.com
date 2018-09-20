@@ -9,7 +9,7 @@ $config{'ConfirmationMode'} = 0;
 $config{'sendmail'} = '/usr/sbin/sendmail';
 
 ## フォームの送信先
-push @mailto,'satohmsys@gmail.com';
+push @mailto,'staff@acci.or.jp';
 
 ## 自動返信メールの差出人名
 $config{'fromname'} = '青森スタートアップセンターウェブサイト';
@@ -76,7 +76,7 @@ $config{"ReturnSubject"} = 'お問い合せありがとうございました [ %
 
 ## 自動返信メールの本文
 $_TEXT{'responder'} = <<'__return_body__';
-<_姓名_> 様
+<_お名前_> 様
 ──────────────────────────
 
 <_都道府県_北海道_>
