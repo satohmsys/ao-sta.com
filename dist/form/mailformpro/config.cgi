@@ -38,7 +38,7 @@ $config{'SerialBoost'} = 0;
 $config{'ThanksPage'} = '../../thanks.html?no=%s';
 
 ## 設置者に届くメールの件名
-$config{'subject'} = '[ %s ] お問い合せフォームから';
+$config{'subject'} = '[ %s ] AOMORI STARTUP CENTER　ウェブサイトお問い合せフォームから';
 
 ## 設置者に届くメールの本文整形
 $_TEXT{'posted'} = <<'__posted_body__';
