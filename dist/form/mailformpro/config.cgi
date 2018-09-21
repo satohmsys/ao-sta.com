@@ -9,7 +9,7 @@ $config{'ConfirmationMode'} = 0;
 $config{'sendmail'} = '/usr/sbin/sendmail';
 
 ## フォームの送信先
-push @mailto,'satohmsys@gmail.com';
+push @mailto,'staff@acci.or.jp';
 
 ## 自動返信メールの差出人名
 $config{'fromname'} = '青森スタートアップセンターウェブサイト';
@@ -38,7 +38,7 @@ $config{'SerialBoost'} = 0;
 $config{'ThanksPage'} = '../../thanks.html?no=%s';
 
 ## 設置者に届くメールの件名
-$config{'subject'} = '[ %s ] お問い合せフォームから';
+$config{'subject'} = '[ %s ] AOMORI STARTUP CENTER　ウェブサイトお問い合せフォームから';
 
 ## 設置者に届くメールの本文整形
 $_TEXT{'posted'} = <<'__posted_body__';
@@ -58,8 +58,13 @@ $_TEXT{'posted'} = <<'__posted_body__';
 <_mfp_env_>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-　青森スタートアップセンター
-  署名：
+〒030-0801
+青森県青森市新町1丁目2-18 TEL:017-734-1311
+青森商工会議所会館1階
+AOMORI STARTUP CENTER
+
+直通TEL: 017-718-5377
+(平日: 10:00~20:00,土: 13:00~18:00,日祝年末年始: 休)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 __posted_body__
 
@@ -71,7 +76,7 @@ $config{"ReturnSubject"} = 'お問い合せありがとうございました [ %
 
 ## 自動返信メールの本文
 $_TEXT{'responder'} = <<'__return_body__';
-<_姓名_> 様
+<_お名前_> 様
 ──────────────────────────
 
 <_都道府県_北海道_>
@@ -90,8 +95,13 @@ $_TEXT{'responder'} = <<'__return_body__';
 この度はお問い合わせ重ねてお礼申し上げます。
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-　青森スタートアップセンター
-  署名：
+〒030-0801
+青森県青森市新町1丁目2-18 TEL:017-734-1311
+青森商工会議所会館1階
+AOMORI STARTUP CENTER
+
+直通TEL: 017-718-5377
+(平日: 10:00~20:00,土: 13:00~18:00,日祝年末年始: 休)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 __return_body__
 
