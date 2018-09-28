@@ -50,7 +50,11 @@ let config = {
 					loader: 'babel-loader',
 					options: {
 						presets: [
-							['env', {'modules': false}],
+							['env', {
+								'modules': false,
+								"useBuiltIns": true							
+								}
+							],
 							'es2015'
 						]
 					}

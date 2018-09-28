@@ -21,8 +21,10 @@
   "homepage": "https://github.com/satohmsys/ao-sta.com#readme",
   "devDependencies": {
     "autoprefixer": "^8.3.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
