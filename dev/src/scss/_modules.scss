@@ -154,13 +154,28 @@ body{
 				
 		li{
 			list-style: none;
+			
+			@include mq( 1366){
+				font-size: $fontsize_s;
+			}	
+
+			@include mq( tab ){
+				font-size: 1em;
+			}	
+
 
 			&:not( :last-child ){
 				margin-right: 40px;
 
+				@include mq( 1366){
+					margin-right: 25px;
+					font-size: $fontsize_s;
+				}		
+
+
 				@include mq( tab ){
 					margin-right: 0;
-				}				
+				}								
 			}
 		}
 

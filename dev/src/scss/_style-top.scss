@@ -41,8 +41,8 @@
     
 
     &__index{
-        line-height: 1;
-        margin-bottom: $space_m;
+        line-height: 1.4;
+        margin-bottom: $space_m - 10px ;
         color: $color_text_index;
         font-family: $fontFamily_en;
         font-size: $fontsize_index_l;
@@ -51,7 +51,12 @@
         @include mq( tab ){
             font-size: $fontsize_index_l_sp;
             margin-bottom: $space_s_sp;
-        }        
+        }      
+        
+
+       > span > span{
+           line-height: 1;
+       }
     }
 
     &__index.js-effect{
@@ -84,8 +89,8 @@
     }    
 
     &__index__description{
-        line-height: 1;
-        margin-top: $space_s;
+        line-height: 1.4;
+        margin-top: $space_s - 10px;
         display: block;
         color: $basefontColor;
         font-size: 1.6rem;
@@ -182,7 +187,7 @@
         align-items: flex-end;
         justify-content: space-between;
 
-        @include mq( tab ){
+        @include mq( 1000 ){
             align-items: flex-start;
             flex-direction: column;
         }        
@@ -198,7 +203,7 @@
             font-weight: 900;
             color: $color_text_index;
 
-            @include mq( tab ){
+            @include mq( 1000 ){
                 line-height: #{36/50.4};
                 font-size: 3.6rem;
                 width: auto;                
@@ -221,7 +226,7 @@
                 &:not( :last-child ){
                     margin-bottom: $space_s;
 
-                    @include mq( tab ){
+                    @include mq( 1000 ){
                         margin-bottom: 0.25em;
                     }                    
                 }
@@ -268,7 +273,11 @@
             white-space: nowrap;
             font-size: $fontsize_xl;
 
-            @include mq( tab ){
+            @include mq( 1140 ){
+                font-size: $fontsize_m;                
+            }
+
+            @include mq( 1000 ){
                 margin-top: 1em;
                 line-height: $baselineHeight;
                 font-size: $fontsize_xl_sp;
@@ -492,6 +501,7 @@
 
             svg{
                 fill: none;
+                transition: transition();
                 transform: translate3d(0,0,0);
 
                 @include mq( tab ){
@@ -501,7 +511,9 @@
 
         
             path{
-                stroke: #999;
+                stroke: none;
+                fill: none;
+                transition: transition();                
                 // stroke-dasharray: #{1783 };
                 // stroke-dashoffset: -#{1783 };
                 // transition: all 3s linear 0s;
@@ -510,7 +522,7 @@
                 //         fill 0.5s linear 3s;
             }
 
-            .-on{
+            .-on path{
                 fill: #f6ece6;
                 // stroke-dasharray: #{0};
                 // stroke-dashoffset: -#{0};
@@ -549,6 +561,8 @@
             
 
             li{
+                max-width: 210px;
+                width: calc( 20% - 20px  );
                 line-height: 1;
                 list-style: none;
 
@@ -574,6 +588,7 @@
             img{
                 border: 1px solid $color_border;
                 line-height: 0;
+                box-sizing: border-box;
             }
 
             a{

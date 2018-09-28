@@ -10,6 +10,9 @@ import 'slick-carousel';
 			arrows: false,
 			autoplay: true,
 			autoplayspeed: 700,
+		  pauseOnFocus: false,
+		  pauseOnHover: false,
+		  pauseOnDotsHover: false,	
 			dots: false,
 			infinite: true,
 			pause: 5000,
@@ -42,9 +45,9 @@ import 'slick-carousel';
 					});
 				}
 	
-				if( $a_offset * 0.8 < $scrollBottom ){
-					$a.find('path').attr( {style: 'stroke-dasharray:'+ $a_pathlength * 1 + '; ' + 'stroke-dashoffset:' +  $a_pathlength * -1 });
-				}
+				// if( $a_offset * 0.8 < $scrollBottom ){
+				// 	$a.find('path').attr( {style: 'stroke-dasharray:'+ $a_pathlength * 1 + '; ' + 'stroke-dashoffset:' +  $a_pathlength * -1 });
+				// }
 	
 				$a.css( {
 					'transform': 'translateY(' + $scrollVal / -6 + 'px' + ')'

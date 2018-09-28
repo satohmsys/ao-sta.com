@@ -178,7 +178,6 @@ if( $('#calendar').length ){
 }
 
 
-
 export { $ };
 export { $w };
 export { getScrollVal };

@@ -114,8 +114,7 @@
 .section{
     letter-spacing: 0.15em;
 	&__index{
-		line-height: 1;
-		margin-bottom: $space_m;
+		margin-bottom: $space_m - 10px;
 		font-weight: 900;
 		font-size: $fontsize_index_l;
 		font-family: $fontFamily_en;
@@ -124,7 +123,12 @@
 		@include mq( tab ){
 			font-size: $fontsize_index_l_sp;
 			margin-bottom: $space_s;
-		}		
+		}	
+
+
+       > span > span{
+           line-height: 1;
+       }			
     }	
 }
 
