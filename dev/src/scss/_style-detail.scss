@@ -150,6 +150,7 @@
 			height: 0;
 			padding-top: percentage( 650 / 500 );
 			transition: easeInOut();
+			transition-property: opacity,padding;
 			position: relative;
 			z-index: 1;
 			overflow: hidden;

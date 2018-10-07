@@ -32,7 +32,7 @@ if ($( '.section--imgs').length ){
 				}
 
 				$imgArea.css({
-					'transition' : 'none',
+					// 'transition' : 'none',
 					// 'transform': 'translateY(' + $scrollVal/ - ($w.width() *0.1) +'px )'
 					'transform': 'translateY(' + $scrollDiff / ($w.width() * $spread.area) +'px )'
 				})

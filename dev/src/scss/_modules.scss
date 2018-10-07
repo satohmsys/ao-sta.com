@@ -41,6 +41,7 @@ body{
 	@include mq( tab ){
 		padding-top: 20px;
 		padding-bottom: 20px;
+		position: absolute;
 
 		@at-root .-isScrolled .siteHeader{
 			padding-top: 20px;
@@ -169,9 +170,7 @@ body{
 
 				@include mq( 1366){
 					margin-right: 25px;
-					font-size: $fontsize_s;
 				}		
-
 
 				@include mq( tab ){
 					margin-right: 0;
